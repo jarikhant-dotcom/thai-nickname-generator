@@ -1,10 +1,64 @@
 // 全局数据字典
 const nameDB = [
+    // --- 可爱动物 ---
     { category: "可爱动物", name: "มด", pron: "Mod (摩)", meaning: "蚂蚁", gender: "男女通用", desc: "经典泰国小名，寓意身材娇小可爱、勤劳踏实。" },
     { category: "可爱动物", name: "นก", pron: "Nok (诺)", meaning: "鸟", gender: "男女通用", desc: "寓意像鸟儿一样自由自在、飞得高看得远。" },
     { category: "可爱动物", name: "แมว", pron: "Maew (喵)", meaning: "猫", gender: "偏向女生", desc: "现代女生常用，寓意像小猫一样温顺娇俏。" },
-    // ... 将你原本完整的 nameDB 数组内容全盘粘贴在这里 ...
+    { category: "可爱动物", name: "ปลาวาฬ", pron: "Pla-wan (巴湾)", meaning: "鲸鱼", gender: "偏向男生", desc: "近年来流行的大气小名，常用于微胖可爱的男孩。" },
+    { category: "可爱动物", name: "หมู", pron: "Moo (姆)", meaning: "猪", gender: "男女通用", desc: "在泰国叫‘小猪’是极度亲昵的表现，代表白胖健康。" },
+    { category: "可爱动物", name: "กุ้ง", pron: "Goong (恭)", meaning: "虾", gender: "男女通用", desc: "常用于个子小巧灵活的孩子。" },
+    { category: "可爱动物", name: "ปลา", pron: "Pla (巴)", meaning: "鱼", gender: "男女通用", desc: "寓意如鱼得水，自由自在。" },
+    { category: "可爱动物", name: "หมี", pron: "Mee (咪)", meaning: "熊", gender: "男女通用", desc: "给人憨厚、可爱、有安全感的感觉。" },
+    { category: "可爱动物", name: "กระต่าย", pron: "Kra-tai (嘎带)", meaning: "兔子", gender: "偏向女生", desc: "温柔活泼，非常适合女孩子。" },
+    { category: "可爱动物", name: "ช้าง", pron: "Chang (畅)", meaning: "大象", gender: "偏向男生", desc: "大象是泰国神兽，寓意强壮、稳重、有福气。" },
+    { category: "可爱动物", name: "เป็ด", pron: "Ped (贝)", meaning: "鸭子", gender: "男女通用", desc: "听起来发音短促可爱，常作小名。" },
+    { category: "可爱动物", name: "เสือ", pron: "Suea (素阿)", meaning: "老虎", gender: "偏向男生", desc: "寓意勇敢、威猛，充满阳刚之气。" },
+    { category: "可爱动物", name: "สิงโต", pron: "Sing-to (星多)", meaning: "狮子", gender: "偏向男生", desc: "代表王者风范和领导力。" },
+    { category: "可爱动物", name: "ผีเสื้อ", pron: "Pee-suea (皮素阿)", meaning: "蝴蝶", gender: "偏向女生", desc: "寓意美丽、蜕变、优雅。" },
+    { category: "可爱动物", name: "เต่า", pron: "Tao (岛)", meaning: "乌龟", gender: "男女通用", desc: "在泰国文化中也有长寿、稳重的意思。" },
+    
+    // --- 甜美水果与食物 ---
+    { category: "甜美水果与食物", name: "แตงโม", pron: "Tang-mo (丹摩)", meaning: "西瓜", gender: "偏向女生", desc: "非常家喻户晓的女孩小名，给人甜美、清爽的感觉。" },
+    { category: "甜美水果与食物", name: "ส้ม", pron: "Som (颂)", meaning: "橙子/橘子", gender: "偏向女生", desc: "寓意大吉大利、酸甜可爱。" },
+    { category: "甜美水果与食物", name: "ชมพู่", pron: "Chom-phoo (崇普)", meaning: "莲雾", gender: "偏向女生", desc: "自带时尚感与名媛甜美风。" },
+    { category: "甜美水果与食物", name: "แอปเปิ้ล", pron: "Apple (苹果)", meaning: "苹果", gender: "偏向女生", desc: "受西方影响，水果英文发音做小名显得很洋气。" },
+    { category: "甜美水果与食物", name: "เชอร์รี่", pron: "Cherry (樱桃)", meaning: "樱桃", gender: "偏向女生", desc: "娇小可爱，充满元气。" },
+    { category: "甜美水果与食物", name: "กล้วย", pron: "Kluay (柜伊)", meaning: "香蕉", gender: "男女通用", desc: "在泰语中也有‘简单、容易’的引申义，寓意一生顺遂。" },
+    { category: "甜美水果与食物", name: "มะนาว", pron: "Ma-nao (玛瑙)", meaning: "柠檬", gender: "偏向女生", desc: "形容性格活泼、带点小脾气的可爱女孩。" },
+    { category: "甜美水果与食物", name: "ข้าวหอม", pron: "Khao-hom (靠洪)", meaning: "茉莉香米", gender: "偏向女生", desc: "非常传统且美好的名字，寓意珍贵、芬芳。" },
+    { category: "甜美水果与食物", name: "น้ำตาล", pron: "Nam-tan (南丹)", meaning: "糖", gender: "偏向女生", desc: "寓意生活甜甜蜜蜜，性格惹人喜爱。" },
+    { category: "甜美水果与食物", name: "เค้ก", pron: "Cake (蛋糕)", meaning: "蛋糕", gender: "偏向女生", desc: "现代流行小名，甜蜜可爱。" },
+    { category: "甜美水果与食物", name: "แพนเค้ก", pron: "Pancake (煎饼)", meaning: "煎饼", gender: "偏向女生", desc: "因为某位著名泰国女星而爆火的名字。" },
+    { category: "甜美水果与食物", name: "พีช", pron: "Peach (桃子)", meaning: "桃子", gender: "男女通用", desc: "年轻人非常喜欢的洋气水果名。" },
+    
+    // --- 自然与宝石 ---
+    { category: "自然与宝石", name: "พลอย", pron: "Ploy (坡loy)", meaning: "宝石", gender: "偏向女生", desc: "极其经典且高雅的女孩名，寓意像珍宝一样被珍视。" },
+    { category: "自然与宝石", name: "เพชร", pron: "Petch (佩)", meaning: "钻石", gender: "偏向男生", desc: "寓意坚强不屈、璀璨夺目，常用于男孩子。" },
+    { category: "自然与宝石", name: "ฟ้า", pron: "Fah (发)", meaning: "天空", gender: "偏向女生", desc: "寓意心胸如天空般广阔纯洁，给人温柔、宁静的感觉。" },
+    { category: "自然与宝石", name: "ฝน", pron: "Fon (丰)", meaning: "雨", gender: "偏向女生", desc: "常给下雨天出生的孩子取名，寓意滋润万物。" },
+    { category: "自然与宝石", name: "น้ำ", pron: "Nam (男)", meaning: "水", gender: "男女通用", desc: "寓意温柔、包容、财富如水连绵不绝。" },
+    { category: "自然与宝石", name: "ดาว", pron: "Dao (道)", meaning: "星星", gender: "偏向女生", desc: "寓意闪闪发光，是人群中的焦点。" },
+    { category: "自然与宝石", name: "เดือน", pron: "Duean (杜恩)", meaning: "月亮/月份", gender: "偏向女生", desc: "传统且富有诗意的小名。" },
+    { category: "自然与宝石", name: "ตะวัน", pron: "Ta-wan (达湾)", meaning: "太阳", gender: "男女通用", desc: "寓意阳光灿烂、充满希望与生命力。" },
+    { category: "自然与宝石", name: "ซัน", pron: "Sun (桑)", meaning: "太阳(英文)", gender: "偏向男生", desc: "Tawan的现代英文版，非常受男孩家庭欢迎。" },
+    { category: "自然与宝石", name: "เมฆ", pron: "Mek (麦)", meaning: "云", gender: "偏向男生", desc: "给人自由、无拘无束的感觉。" },
+    { category: "自然与宝石", name: "หยก", pron: "Yok (哟)", meaning: "玉", gender: "偏向女生", desc: "受华人文化影响，寓意高洁、平安。" },
+    { category: "自然与宝石", name: "มุก", pron: "Mook (木)", meaning: "珍珠", gender: "偏向女生", desc: "寓意纯洁无瑕，是非常优雅的女孩名。" },
+    { category: "自然与宝石", name: "ทะเล", pron: "Ta-lay (塔雷)", meaning: "大海", gender: "男女通用", desc: "近年来流行的文艺向小名。" },
     { category: "自然与宝石", name: "ทราย", pron: "Sai (赛)", meaning: "沙子", gender: "偏向女生", desc: "经典泰国名字，给人温柔细腻的印象。" },
+    
+    // --- 现代洋气 ---
     { category: "现代洋气", name: "บอล", pron: "Ball (波)", meaning: "球", gender: "偏向男生", desc: "非常普遍的男孩子小名，寓意热爱运动、开朗。" },
+    { category: "现代洋气", name: "แบงก์", pron: "Bank (班)", meaning: "银行", gender: "偏向男生", desc: "泰国人喜欢用财富相关的英文做小名，寓意财源滚滚。" },
+    { category: "现代洋气", name: "กิ๊ฟ", pron: "Gift (技发)", meaning: "礼物", gender: "偏向女生", desc: "寓意孩子是上天赐予最珍贵的礼物。" },
+    { category: "现代洋气", name: "มิ้นท์", pron: "Mint (敏)", meaning: "薄荷", gender: "偏向女生", desc: "给人清新自然、充满时尚气息的印象。" },
+    { category: "现代洋气", name: "มายด์", pron: "Mind (迈)", meaning: "心智/思想", gender: "偏向女生", desc: "非常流行的00后女孩名字，听起来聪明伶俐。" },
+    { category: "现代洋气", name: "ไอซ์", pron: "Ice (艾斯)", meaning: "冰", gender: "男女通用", desc: "听起来很酷的名字。" },
+    { category: "现代洋气", name: "นิว", pron: "New (纽)", meaning: "新", gender: "男女通用", desc: "寓意新生命的到来、新的希望。" },
+    { category: "现代洋气", name: "โฟกัส", pron: "Focus (佛卡)", meaning: "焦点", gender: "男女通用", desc: "父母希望孩子做任何事都能专心致志。" },
+    { category: "现代洋气", name: "บอส", pron: "Boss (波斯)", meaning: "老板", gender: "偏向男生", desc: "寄托了父母希望孩子未来事业有成的期望。" },
+    { category: "现代洋气", name: "แชมป์", pron: "Champ (强)", meaning: "冠军", gender: "偏向男生", desc: "寓意永远做第一名，充满胜负欲与进取心。" },
+    { category: "现代洋气", name: "คิง", pron: "King (金)", meaning: "国王", gender: "偏向男生", desc: "大气、尊贵的名字。" },
+    { category: "现代洋气", name: "กีต้าร์", pron: "Guitar (吉他)", meaning: "吉他", gender: "男女通用", desc: "带有艺术气息，热爱音乐的家庭首选。" },
     { category: "现代洋气", name: "ไวน์", pron: "Wine (瓦伊)", meaning: "葡萄酒", gender: "偏向女生", desc: "听起来高贵优雅且时尚。" }
 ];
