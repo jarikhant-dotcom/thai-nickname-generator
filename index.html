@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>泰文小名生成器 - 专属你的地道泰式昵称</title>
+    <meta name="description" content="免费好用的泰文小名(Nickname)生成器，提供可爱动物、甜美食物、自然宝石等多种风格的纯正泰语小名，附带详细中文寓意与真人发音。">
+    <meta name="keywords" content="泰文名, 泰语小名, 泰国名字生成器, 泰语发音, 泰国文化, Thai Nickname">
+    
+    <meta property="og:title" content="泰文小名生成器 🇹🇭">
+    <meta property="og:description" content="一键生成带有美好寓意的地道泰文小名，快来看看你的专属泰文名是什么！">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://你的用户名.github.io/你的仓库名/">
+    <meta property="og:image" content="https://你的用户名.github.io/你的仓库名/cover.jpg"> 
+    
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇹🇭</text></svg>">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXX');
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="ad-container" id="ad-top"><span>[ 顶部自适应广告位 ]</span></div>
+
+    <div class="card">
+        <div class="header-top">
+            <div id="google_translate_element"></div>
+        </div>
+
+        <h1>🇹🇭 泰文小名生成器</h1>
+        <p class="subtitle">探索属于你的地道泰式小名，附带详细寓意解读。</p>
+        
+        <div class="form-group">
+            <label for="category">偏好的风格分类：</label>
+            <select id="category" class="custom-select">
+                <option value="all">全部风格</option>
+                <option value="可爱动物">可爱动物</option>
+                <option value="甜美水果与食物">甜美水果与食物</option>
+                <option value="自然与宝石">自然与宝石</option>
+                <option value="现代洋气">现代洋气 (含英文)</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>性别倾向：</label>
+            <div class="radio-group">
+                <label><input type="radio" name="gender" value="all" checked> 不限</label>
+                <label><input type="radio" name="gender" value="偏向女生"> 偏向女生</label>
+                <label><input type="radio" name="gender" value="偏向男生"> 偏向男生</label>
+                <label><input type="radio" name="gender" value="男女通用"> 男女通用</label>
+            </div>
+        </div>
+
+        <button id="generate-btn" class="generate-btn">🎲 随机生成泰文小名</button>
+        
+        <div class="ad-container" id="ad-middle" style="margin-top: 25px; min-height: 60px;">
+            <span>[ 内容嵌段广告位 ]</span>
+        </div>
+
+        <div id="error-msg"></div>
+
+        <div class="result-area" id="result-area">
+            <div class="meaning" id="res-meaning">含义</div>
+            
+            <div class="thai-name-container" id="speak-btn" title="点击听发音">
+                <span class="thai-name" id="res-thai">ชื่อ</span>
+                <span class="speaker-icon">🔊</span>
+            </div>
+            
+            <div class="pronunciation" id="res-pronunciation">读音</div>
+            <div class="explanation" id="res-explanation">解读</div>
+        </div>
+    </div>
+    
+    <div class="ad-container" id="ad-bottom"><span>[ 底部自适应广告位 ]</span></div>
+</div>
+
+<div id="cookie-banner" class="cookie-banner">
+    <p>本网站使用 Cookie 来分析流量并提供个性化广告体验。继续使用即表示您同意我们的<a href="#">隐私政策</a>。</p>
+    <button id="accept-cookie">我同意</button>
+</div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({pageLanguage: 'zh-CN'}, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="data.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
