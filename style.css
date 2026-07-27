@@ -123,3 +123,30 @@ select.custom-select:focus { outline: none; border-color: var(--primary-color); 
     background-color: var(--primary-color); color: white; border: none;
     padding: 8px 20px; border-radius: 6px; cursor: pointer; font-weight: bold;
 }
+
+/* SEO 文章区美化 */
+.seo-article {
+    text-align: left;
+    line-height: 1.7;
+    color: #444;
+}
+.seo-article h2 {
+    color: var(--primary-color);
+    font-size: 20px;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    border-bottom: 2px dashed #eee;
+    padding-bottom: 8px;
+}
+.seo-article p {
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+.seo-article ul {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+.seo-article li {
+    font-size: 15px;
+    margin-bottom: 8px;
+}
