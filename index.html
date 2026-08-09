@@ -18,6 +18,10 @@
     <div class="main-wrapper">
         
         <div class="card left-column">
+            <div class="header-top" style="text-align: right; margin-bottom: 10px;">
+                <div id="google_translate_element"></div>
+            </div>
+
             <h1>🇹🇭 Thai Nickname Generator</h1>
             <p class="subtitle">Explore authentic Thai nicknames tailored for you, complete with detailed meanings.</p>
             
@@ -61,11 +65,11 @@
                 <div class="meaning" id="res-meaning">Meaning</div>
                 
                 <div class="thai-name-container" id="speak-btn" title="Click to listen">
-                    <span class="thai-name" id="res-thai">ชื่อ</span>
+                    <span class="thai-name notranslate" id="res-thai">ชื่อ</span>
                     <span class="speaker-icon">🔊</span>
                 </div>
                 
-                <div class="pronunciation" id="res-pronunciation">Pronunciation</div>
+                <div class="pronunciation notranslate" id="res-pronunciation">Pronunciation</div>
                 <div class="explanation" id="res-explanation">Detailed Explanation</div>
             </div>
         </div>
@@ -99,6 +103,17 @@
     <p>This website uses cookies to analyze traffic and provide personalized ad experiences. By continuing to use our site, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
     <button id="accept-cookie">I Agree</button>
 </div>
+
+<script type="text/javascript">
+function googleTranslateElementInit() {
+  new google.translate.TranslateElement({
+    pageLanguage: 'en',
+    includedLanguages: 'en,th,zh-CN,ja,ko,es,fr,de', // 允许切换的语言：英文、泰语、中文、日韩、欧州语言等
+    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+  }, 'google_translate_element');
+}
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script src="data.js"></script>
 <script src="app.js"></script>
