@@ -3,6 +3,7 @@ let usedNames = new Set();
 let thaiVoices = [];
 let currentThaiName = '';
 let isGenerating = false;
+let fallbackAudio = null;
 
 // DOM content loaded
 document.addEventListener('DOMContentLoaded', () => {
@@ -79,7 +80,6 @@ function generateName() {
     const filteredNames = getFilteredNames();
     const availableNames = filteredNames.filter(item => !usedNames.has(item.name));
 
-    // Handle no results
     if (availableNames.length === 0) {
         errorMsg.innerHTML = `⚠️ All ${filteredNames.length} names in this filter have been generated!<br><button class="reset-btn" onclick="resetPool()">Reset Name Pool</button>`;
         errorMsg.style.display = 'block';
@@ -130,7 +130,6 @@ function initCustomLanguageSelector() {
     const customSelect = document.getElementById('custom-lang-select');
     if (!customSelect) return;
 
-    // Sync dropdown if user already has a Google Translate cookie
     const match = document.cookie.match(/googtrans=\/en\/([^;]+)/);
     if (match && match[1]) {
         customSelect.value = match[1];
@@ -144,14 +143,13 @@ function initCustomLanguageSelector() {
             googleCombo.value = targetLang;
             googleCombo.dispatchEvent(new Event('change'));
         } else {
-            // Fallback via googtrans cookie if script is still loading
             document.cookie = `googtrans=/en/${targetLang}; path=/`;
             location.reload();
         }
     });
 }
 
-// --- Speech Synthesis ---
+// --- Speech Synthesis (Native Thai Voice + Cloud TTS Fallback) ---
 function initSpeechSynthesis() {
     if ('speechSynthesis' in window) {
         speechSynthesis.onvoiceschanged = loadVoices;
@@ -164,23 +162,43 @@ function loadVoices() {
     thaiVoices = voices.filter(voice => voice.lang.toLowerCase().includes('th'));
 }
 
+function playFallbackAudio(text) {
+    if (fallbackAudio) {
+        fallbackAudio.pause();
+        fallbackAudio = null;
+    }
+    const encoded = encodeURIComponent(text);
+    const url = `https://translate.google.com/translate_tts?ie=UTF-8&q=${encoded}&tl=th&client=tw-ob`;
+    fallbackAudio = new Audio(url);
+    fallbackAudio.play().catch(err => {
+        console.warn('Cloud TTS playback blocked or failed:', err);
+    });
+}
+
 function speakThaiName() {
     if (!currentThaiName) return;
-    
-    if ('speechSynthesis' in window) {
+
+    // Refresh voice list in case voices loaded asynchronously
+    if ('speechSynthesis' in window && thaiVoices.length === 0) {
+        loadVoices();
+    }
+
+    // 1. Prefer native Thai voice if installed on OS/Browser
+    if ('speechSynthesis' in window && thaiVoices.length > 0) {
         window.speechSynthesis.cancel();
+        window.speechSynthesis.resume();
 
         const utterance = new SpeechSynthesisUtterance(currentThaiName);
-        utterance.lang = 'th-TH'; 
-        utterance.rate = 0.85;    
-        
-        if (thaiVoices.length > 0) {
-            utterance.voice = thaiVoices[0];
-        }
-        
+        utterance.voice = thaiVoices[0];
+        utterance.lang = 'th-TH';
+        utterance.rate = 0.85;
+
+        // If native speech errors out, fall back to cloud audio
+        utterance.onerror = () => playFallbackAudio(currentThaiName);
         window.speechSynthesis.speak(utterance);
     } else {
-        alert("Sorry, your browser does not support Text-to-Speech.");
+        // 2. Fallback to Cloud Thai TTS when Windows/device lacks Thai voice pack
+        playFallbackAudio(currentThaiName);
     }
 }
 
