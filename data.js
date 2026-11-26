@@ -1,4 +1,4 @@
-// Global Name Database (Cleaned & Deduplicated English Version)
+// Global Name Database (Cleaned & Deduplicated English Version - 318 Entries)
 const nameDB = [
     // === Cute Animals ===
     { category: "Cute Animals", name: "มด", pron: "Mod", meaning: "Ant", gender: "Unisex", desc: "A classic Thai nickname for a petite, hardworking, and down-to-earth person." },
@@ -41,6 +41,10 @@ const nameDB = [
     { category: "Cute Animals", name: "หอย", pron: "Hoi", meaning: "Shell", gender: "Unisex", desc: "A traditional nickname with an oceanic feel." },
     { category: "Cute Animals", name: "หนอน", pron: "Nhon", meaning: "Caterpillar", gender: "Unisex", desc: "Sounds soft and squishy, often used as an extremely affectionate baby nickname." },
     { category: "Cute Animals", name: "ชีต้า", pron: "Cheetah", meaning: "Cheetah", gender: "Male-leaning", desc: "A symbol of speed and explosive power, very cool." },
+    { category: "Cute Animals", name: "หมาป่า", pron: "Ma-pa", meaning: "Wolf", gender: "Male-leaning", desc: "Symbolizes loyalty, teamwork, and a cool, independent spirit." },
+    { category: "Cute Animals", name: "ลูกเจี๊ยบ", pron: "Look-jiab", meaning: "Chick", gender: "Female-leaning", desc: "Extremely petite and adorable, often used for lively little girls." },
+    { category: "Cute Animals", name: "ปลาดาว", pron: "Pla-dao", meaning: "Starfish", gender: "Female-leaning", desc: "Combines the ocean vibe with a shining star, whimsical and cute." },
+    { category: "Cute Animals", name: "จิงโจ้", pron: "Jing-jo", meaning: "Kangaroo", gender: "Male-leaning", desc: "Energetic and bouncy, great for active boys." },
 
     // === Sweet Fruits & Food ===
     { category: "Sweet Fruits & Food", name: "แตงโม", pron: "Tang-mo", meaning: "Watermelon", gender: "Female-leaning", desc: "A very famous girl's nickname, giving a sweet and refreshing feeling." },
@@ -81,6 +85,12 @@ const nameDB = [
     { category: "Sweet Fruits & Food", name: "ข้าวกล้อง", pron: "Khao-glong", meaning: "Brown Rice", gender: "Unisex", desc: "A reflection of traditional farming culture, representing health and simplicity." },
     { category: "Sweet Fruits & Food", name: "องุ่น", pron: "A-ngun", meaning: "Grape", gender: "Female-leaning", desc: "Sweet and sour, petite and delicate." },
     { category: "Sweet Fruits & Food", name: "เงาะ", pron: "Ngo", meaning: "Rambutan", gender: "Unisex", desc: "A classic Thai fruit, full of local flavor." },
+    { category: "Sweet Fruits & Food", name: "ชาเย็น", pron: "Cha-yen", meaning: "Thai Iced Tea", gender: "Unisex", desc: "Thailand's iconic sweet and creamy drink, warm, energetic, and beloved by all." },
+    { category: "Sweet Fruits & Food", name: "ข้าวปั้น", pron: "Khao-pan", meaning: "Rice Ball / Onigiri", gender: "Unisex", desc: "Compact, cute, and full of warmth, very popular among modern Thai parents." },
+    { category: "Sweet Fruits & Food", name: "มะม่วง", pron: "Ma-muang", meaning: "Mango", gender: "Unisex", desc: "A beloved tropical fruit in Thailand, sweet and full of local charm." },
+    { category: "Sweet Fruits & Food", name: "ลิ้นจี่", pron: "Lin-jee", meaning: "Lychee", gender: "Female-leaning", desc: "Sweet, fragrant, and delicate, a classic fruity nickname for girls." },
+    { category: "Sweet Fruits & Food", name: "ขนมผิง", pron: "Kha-nom-phing", meaning: "Thai Tapioca Cookie", gender: "Female-leaning", desc: "A traditional Thai dessert that melts in your mouth, symbolizing gentleness." },
+    { category: "Sweet Fruits & Food", name: "ปังปอนด์", pron: "Pang-pond", meaning: "Loaf of Bread", gender: "Male-leaning", desc: "Soft, warm, and substantial, a very endearing modern nickname for boys." },
 
     // === Nature & Gems ===
     { category: "Nature & Gems", name: "พลอย", pron: "Ploy", meaning: "Gemstone", gender: "Female-leaning", desc: "A highly classic and elegant girl's name, meaning to be cherished like a jewel." },
@@ -115,6 +125,11 @@ const nameDB = [
     { category: "Nature & Gems", name: "แซนด์", pron: "Sand", meaning: "Sand (English)", gender: "Unisex", desc: "The modern English version of Sai (Sand)." },
     { category: "Nature & Gems", name: "ออโรร่า", pron: "Aurora", meaning: "Aurora", gender: "Female-leaning", desc: "Dazzling and ethereal, a modern fairy-like name." },
     { category: "Nature & Gems", name: "สปาร์ค", pron: "Spark", meaning: "Spark", gender: "Male-leaning", desc: "Ready to ignite, full of energy." },
+    { category: "Nature & Gems", name: "ไพลิน", pron: "Pai-lin", meaning: "Blue Sapphire", gender: "Female-leaning", desc: "A precious gemstone representing wisdom, nobility, and deep beauty." },
+    { category: "Nature & Gems", name: "ทับทิม", pron: "Tub-tim", meaning: "Ruby / Pomegranate", gender: "Female-leaning", desc: "Symbolizes passion, good fortune, and radiant beauty." },
+    { category: "Nature & Gems", name: "สายลม", pron: "Sai-lom", meaning: "Breeze", gender: "Unisex", desc: "Gentle, refreshing, and free-spirited like a cool wind." },
+    { category: "Nature & Gems", name: "หมอก", pron: "Mok", meaning: "Mist / Fog", gender: "Male-leaning", desc: "Cool, mysterious, and poetic, reminiscent of northern Thai mountains." },
+    { category: "Nature & Gems", name: "บุษบา", pron: "But-sa-ba", meaning: "Flower / Gem (Classical)", gender: "Female-leaning", desc: "Derived from classical Thai literature, exuding grace and elegance." },
 
     // === Modern / Western ===
     { category: "Modern / Western", name: "บอล", pron: "Ball", meaning: "Ball", gender: "Male-leaning", desc: "A very common boy's nickname, implying a love for sports and cheerfulness." },
@@ -184,6 +199,11 @@ const nameDB = [
     { category: "Modern / Western", name: "กีวี่", pron: "Kiwi", meaning: "Kiwi", gender: "Female-leaning", desc: "Sweet and sour, very playful pronunciation." },
     { category: "Modern / Western", name: "เมลอน", pron: "Melon", meaning: "Melon", gender: "Female-leaning", desc: "Premium Japanese-style fruit, representing sweetness and juiciness." },
     { category: "Modern / Western", name: "ริชชี่", pron: "Richy", meaning: "Richy", gender: "Unisex", desc: "The most direct wealth wish, wealthy and modern." },
+    { category: "Modern / Western", name: "บีม", pron: "Beam", meaning: "Beam of Light", gender: "Unisex", desc: "Short, modern, and bright, very popular among Bangkok youth." },
+    { category: "Modern / Western", name: "พราว", pron: "Proud", meaning: "Proud / Dazzling", gender: "Female-leaning", desc: "Works in both English ('Proud') and Thai ('พราว', meaning sparkling/shining)." },
+    { category: "Modern / Western", name: "เจ็ท", pron: "Jet", meaning: "Jet", gender: "Male-leaning", desc: "Fast, sleek, and ambitious." },
+    { category: "Modern / Western", name: "ไทม์", pron: "Time", meaning: "Time", gender: "Male-leaning", desc: "Modern and thoughtful, reminding one to cherish every moment." },
+    { category: "Modern / Western", name: "ซี", pron: "Sea / C", meaning: "Sea", gender: "Unisex", desc: "Minimalist single-syllable nickname evoking a calm and vast ocean." },
 
     // === Colors & Appearance ===
     { category: "Colors & Appearance", name: "แดง", pron: "Dang", meaning: "Red", gender: "Unisex", desc: "One of the most traditional Thai nicknames, festive and full of vitality." },
@@ -197,6 +217,12 @@ const nameDB = [
     { category: "Colors & Appearance", name: "หมวย", pron: "Muay", meaning: "Chinese Girl", gender: "Female-leaning", desc: "Derived from Teochew, describes a pretty girl with Chinese features (single eyelids, fair skin)." },
     { category: "Colors & Appearance", name: "ตี๋", pron: "Tee", meaning: "Chinese Boy", gender: "Male-leaning", desc: "Derived from Teochew, describes a handsome and fair boy of Chinese descent." },
     { category: "Colors & Appearance", name: "นุ่น", pron: "Noon", meaning: "Kapok", gender: "Female-leaning", desc: "Describes being as soft and light as kapok fluff." },
+    { category: "Colors & Appearance", name: "เขียว", pron: "Khiao", meaning: "Green", gender: "Male-leaning", desc: "A classic traditional Thai nickname symbolizing nature, freshness, and vitality." },
+    { category: "Colors & Appearance", name: "เหลือง", pron: "Lueang", meaning: "Yellow", gender: "Unisex", desc: "Bright and auspicious, associated with warmth and positivity in Thai culture." },
+    { category: "Colors & Appearance", name: "ส้มโอ", pron: "Som-o", meaning: "Pomelo", gender: "Female-leaning", desc: "Often playfully used for girls with cute, round cheeks." },
+    { category: "Colors & Appearance", name: "จิ๋ว", pron: "Jiw", meaning: "Tiny", gender: "Unisex", desc: "An affectionate nickname for the smallest or most petite member of the family." },
+    { category: "Colors & Appearance", name: "หล่อ", pron: "Lor", meaning: "Handsome", gender: "Male-leaning", desc: "A direct and confident wish from parents for their son to grow up handsome." },
+    { category: "Colors & Appearance", name: "สวย", pron: "Suay", meaning: "Pretty", gender: "Female-leaning", desc: "Simple, traditional, and straightforward, wishing a girl beauty inside and out." },
 
     // === Traditional & Virtues ===
     { category: "Traditional & Virtues", name: "โชค", pron: "Chok", meaning: "Luck", gender: "Male-leaning", desc: "Brings good luck and fortune." },
@@ -211,6 +237,12 @@ const nameDB = [
     { category: "Traditional & Virtues", name: "สุข", pron: "Suk", meaning: "Happy", gender: "Unisex", desc: "A lifetime of peace and joy." },
     { category: "Traditional & Virtues", name: "ขวัญ", pron: "Kwan", meaning: "Soul / Gift", gender: "Female-leaning", desc: "Very classical Thai, referring to a spiritual treasure." },
     { category: "Traditional & Virtues", name: "บุญ", pron: "Boon", meaning: "Merit / Blessing", gender: "Male-leaning", desc: "One of the most sacred names in Buddhist culture." },
+    { category: "Traditional & Virtues", name: "มีตังค์", pron: "Mee-tang", meaning: "Have Money / Wealthy", gender: "Unisex", desc: "A super popular modern Thai nickname wishing the child lifelong financial abundance." },
+    { category: "Traditional & Virtues", name: "นำโชค", pron: "Nam-chok", meaning: "Bring Luck", gender: "Male-leaning", desc: "Implies the child is a lucky charm who brings good fortune to the entire family." },
+    { category: "Traditional & Virtues", name: "พอใจ", pron: "Por-jai", meaning: "Content / Satisfied", gender: "Female-leaning", desc: "Reflects Buddhist wisdom of contentment and inner peace." },
+    { category: "Traditional & Virtues", name: "ตั้งใจ", pron: "Tang-jai", meaning: "Determined / Focused", gender: "Male-leaning", desc: "Represents dedication, sincerity, and strong willpower." },
+    { category: "Traditional & Virtues", name: "ปันปัน", pron: "Pun-pun", meaning: "Sharing", gender: "Unisex", desc: "Derived from 'แบ่งปัน' (to share), wishing for a generous and kind heart." },
+    { category: "Traditional & Virtues", name: "อุ่นใจ", pron: "Oun-jai", meaning: "Warm-hearted / Reassured", gender: "Female-leaning", desc: "Gives a comforting, safe, and warm presence to everyone around." },
 
     // === Plants & Flowers ===
     { category: "Plants & Flowers", name: "ใบเตย", pron: "Bai-toey", meaning: "Pandan Leaf", gender: "Female-leaning", desc: "The most common fragrant leaf in Thai desserts, carrying a natural sweetness." },
@@ -225,6 +257,12 @@ const nameDB = [
     { category: "Plants & Flowers", name: "มะกอก", pron: "Ma-gok", meaning: "Olive", gender: "Unisex", desc: "Traditional, carrying meanings of peace and longevity." },
     { category: "Plants & Flowers", name: "แครอท", pron: "Carrot", meaning: "Carrot", gender: "Unisex", desc: "Sounds crisp and energetic." },
     { category: "Plants & Flowers", name: "ดอกไม้", pron: "Dok-mai", meaning: "Flower", gender: "Female-leaning", desc: "The most straightforward compliment, beautiful as a flower." },
+    { category: "Plants & Flowers", name: "กอหญ้า", pron: "Kor-ya", meaning: "Tuft of Grass", gender: "Female-leaning", desc: "Poetic and resilient, symbolizing natural beauty and grounded strength." },
+    { category: "Plants & Flowers", name: "พิกุล", pron: "Phi-kun", meaning: "Bullet Wood Flower", gender: "Female-leaning", desc: "A sacred, fragrant traditional Thai flower often mentioned in classic folklore." },
+    { category: "Plants & Flowers", name: "ทานตะวัน", pron: "Than-ta-wan", meaning: "Sunflower", gender: "Female-leaning", desc: "Bright, cheerful, and always facing the light." },
+    { category: "Plants & Flowers", name: "ต้นสน", pron: "Ton-son", meaning: "Pine Tree", gender: "Male-leaning", desc: "Tall, steady, and evergreen, a popular nature name for boys." },
+    { category: "Plants & Flowers", name: "ผักบุ้ง", pron: "Phak-bung", meaning: "Morning Glory", gender: "Female-leaning", desc: "A down-to-earth, lively Thai vegetable name, crisp and memorable." },
+    { category: "Plants & Flowers", name: "แตงกวา", pron: "Tang-kwa", meaning: "Cucumber", gender: "Female-leaning", desc: "Fresh, cool, and sweet, a classic everyday plant nickname for girls." },
 
     // === Daily Life & Objects ===
     { category: "Daily Life & Objects", name: "แสตมป์", pron: "Stamp", meaning: "Stamp", gender: "Unisex", desc: "A classic object name favored by Thais, bearing witness to distance and friendship." },
@@ -241,6 +279,12 @@ const nameDB = [
     { category: "Daily Life & Objects", name: "เตียง", pron: "Tiang", meaning: "Bed", gender: "Unisex", desc: "A warm safe haven." },
     { category: "Daily Life & Objects", name: "ภาพ", pron: "Pap", meaning: "Picture", gender: "Female-leaning", desc: "Recording beautiful moments, full of artistic sense." },
     { category: "Daily Life & Objects", name: "กล้อง", pron: "Glong", meaning: "Camera", gender: "Male-leaning", desc: "A beloved modern item, capturing beauty." },
+    { category: "Daily Life & Objects", name: "กระดุม", pron: "Kra-dum", meaning: "Button", gender: "Unisex", desc: "Small, round, and cute, keeping everything together." },
+    { category: "Daily Life & Objects", name: "ดินสอ", pron: "Din-sor", meaning: "Pencil", gender: "Unisex", desc: "Symbolizes learning, creativity, and writing one's own story." },
+    { category: "Daily Life & Objects", name: "หนังสือ", pron: "Nang-sue", meaning: "Book", gender: "Male-leaning", desc: "Represents knowledge, wisdom, and a love for reading." },
+    { category: "Daily Life & Objects", name: "เทียน", pron: "Tian", meaning: "Candle", gender: "Female-leaning", desc: "Gentle and illuminating, bringing warmth and light to others." },
+    { category: "Daily Life & Objects", name: "ร่ม", pron: "Rom", meaning: "Umbrella", gender: "Male-leaning", desc: "Symbolizes shelter, protection, and reliability for loved ones." },
+    { category: "Daily Life & Objects", name: "ถุงเงิน", pron: "Thung-ngoen", meaning: "Money Bag", gender: "Unisex", desc: "A traditional auspicious object name wishing for prosperity and savings." },
 
     // === Repeated Sounds & Onomatopoeia ===
     { category: "Repeated Sounds & Onomatopoeia", name: "เปาเปา", pron: "Pao-pao", meaning: "Steamed Bun", gender: "Unisex", desc: "A famous child star's nickname, describing chubby cheeks like a bun." },
@@ -257,6 +301,9 @@ const nameDB = [
     { category: "Repeated Sounds & Onomatopoeia", name: "โมเม", pron: "Mo-may", meaning: "No exact meaning", gender: "Female-leaning", desc: "A common traditional Thai two-syllable girl's name with a gentle sound." },
     { category: "Repeated Sounds & Onomatopoeia", name: "ลูกหมู", pron: "Look-moo", meaning: "Piglet", gender: "Unisex", desc: "An affectionate term heavily used by elders, full of doting." },
     { category: "Repeated Sounds & Onomatopoeia", name: "ลูกแก้ว", pron: "Look-kaew", meaning: "Glass Marble", gender: "Female-leaning", desc: "Crystal clear, treated as the apple of one's eye." },
+    { category: "Repeated Sounds & Onomatopoeia", name: "กิ๊บกิ๊บ", pron: "Gib-gib", meaning: "Chic / Cute", gender: "Female-leaning", desc: "Playful and stylish, popularized by a famous Thai actress." },
+    { category: "Repeated Sounds & Onomatopoeia", name: "ปุ๊กปิ๊ก", pron: "Pook-pik", meaning: "Chubby & Cute", gender: "Female-leaning", desc: "Describes someone adorably plump, lively, and endearing." },
+    { category: "Repeated Sounds & Onomatopoeia", name: "ตังตัง", pron: "Tang-tang", meaning: "Money (Playful)", gender: "Unisex", desc: "A cute, rhythmic variation of 'Satang' (money), bringing wealth and joy." },
 
     // === Numbers & Time ===
     { category: "Numbers & Time", name: "หนึ่ง", pron: "Neung", meaning: "One", gender: "Unisex", desc: "Usually for the eldest child, implying always striving to be the first." },
@@ -274,6 +321,8 @@ const nameDB = [
     { category: "Numbers & Time", name: "วินเทอร์", pron: "Winter", meaning: "Winter", gender: "Unisex", desc: "A name that brings a touch of coolness to hot Thailand." },
     { category: "Numbers & Time", name: "นาว", pron: "Now", meaning: "Now", gender: "Unisex", desc: "Implies seizing the moment." },
     { category: "Numbers & Time", name: "นิวเยียร์", pron: "New Year", meaning: "New Year", gender: "Unisex", desc: "Lucky ones born on New Year's Day or New Year's Eve." },
+    { category: "Numbers & Time", name: "สี่", pron: "See", meaning: "Four", gender: "Unisex", desc: "Traditionally given to the fourth child in a Thai family." },
+    { category: "Numbers & Time", name: "นาที", pron: "Na-tee", meaning: "Minute", gender: "Male-leaning", desc: "Modern time-inspired name implying precision and valuing every moment." },
 
     // === Personality & Emotions ===
     { category: "Personality & Emotions", name: "จอย", pron: "Joy", meaning: "Joy", gender: "Female-leaning", desc: "Wishing the child a life full of happiness." },
@@ -288,5 +337,6 @@ const nameDB = [
     { category: "Personality & Emotions", name: "เคลียร์", pron: "Clear", meaning: "Clear", gender: "Unisex", desc: "Clear-headed, handling things neatly and cleanly." },
     { category: "Personality & Emotions", name: "ชิล", pron: "Chill", meaning: "Chill", gender: "Unisex", desc: "Easy-going personality, enjoying a slow-paced life." },
     { category: "Personality & Emotions", name: "เฟรนด์", pron: "Friend", meaning: "Friend", gender: "Unisex", desc: "Friendly and well-liked by everyone." },
-    { category: "Personality & Emotions", name: "ลัคกี้", pron: "Lucky", meaning: "Lucky", gender: "Unisex", desc: "Good fortune always accompanies them." }
+    { category: "Personality & Emotions", name: "ลัคกี้", pron: "Lucky", meaning: "Lucky", gender: "Unisex", desc: "Good fortune always accompanies them." },
+    { category: "Personality & Emotions", name: "สนุก", pron: "Sa-nuk", meaning: "Fun", gender: "Unisex", desc: "Embodies the core Thai philosophy of 'Sanuk'—finding joy and fun in everything." }
 ];
