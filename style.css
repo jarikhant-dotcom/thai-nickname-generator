@@ -16,26 +16,25 @@ body {
     justify-content: center; 
     align-items: flex-start;
     min-height: 100vh;
+    top: 0 !important;
 }
 
-/* 扩展整体容器宽度，以容纳左右双栏（宽度设为 1100px） */
+/* Container & 2-Column Grid Layout */
 .container { 
     max-width: 1100px; 
     width: 100%; 
-    margin-top: 10px;
+    margin-top: 15px;
     margin-bottom: 80px; 
 }
 
-/* 核心：左右分栏网格布局 */
 .main-wrapper {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr; /* 左侧略宽，右侧略窄 */
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 25px;
     align-items: start;
     width: 100%;
 }
 
-/* 响应式适配：当屏幕小于 950px 时，自动变为上下单列堆叠 */
 @media (max-width: 950px) {
     .main-wrapper {
         grid-template-columns: 1fr;
@@ -51,98 +50,165 @@ body {
     box-sizing: border-box;
 }
 
-/* 谷歌翻译组件深度美化 */
-.header-top { display: flex; justify-content: flex-end; margin-bottom: 10px; }
-body { top: 0 !important; }
-.skiptranslate > iframe.skiptranslate { display: none !important; }
-#goog-gt-tt { display: none !important; }
-.goog-te-spinner-pos { display: none !important; }
+/* Hide Google Translate Top Banner & Default Widget */
+.header-top { display: flex; justify-content: flex-end; margin-bottom: 12px; }
+.skiptranslate > iframe.skiptranslate,
+.goog-te-banner-frame.skiptranslate,
+#goog-gt-tt,
+.goog-te-spinner-pos,
 .goog-logo-link { display: none !important; }
 .goog-te-gadget { color: transparent !important; font-size: 0; margin: 0; }
-.goog-te-combo {
+
+/* Custom Native Language Dropdown */
+.lang-select {
     padding: 8px 12px;
-    border: 1px solid #ddd;
+    border: 1px solid #d0d7de;
     border-radius: 8px;
     font-size: 14px;
     font-family: inherit;
-    color: #555;
+    color: #333;
     background-color: #f8f9fa;
     cursor: pointer;
     outline: none;
-    transition: border-color 0.3s;
+    transition: border-color 0.2s, box-shadow 0.2s;
 }
-.goog-te-combo:focus { border-color: var(--primary-color); }
-
-/* 广告位 */
-.ad-container {
-    width: 100%; text-align: center; margin: 15px 0; padding: 10px;
-    background-color: #f8f9fa; border: 1px dashed #d9d9d9;
-    border-radius: 12px; box-sizing: border-box; color: #999;
-    font-size: 14px; min-height: 90px; display: flex;
-    justify-content: center; align-items: center; overflow: hidden;
+.lang-select:hover {
+    border-color: var(--primary-color);
 }
-.ad-container ins { display: block !important; width: 100%; }
+.lang-select:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(0, 180, 216, 0.15);
+}
 
-/* 排版与表单 */
-h1 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 26px; text-align: center;}
-.subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 14px;}
+/* Typography & Form */
+h1 { color: var(--primary-color); margin: 0 0 10px 0; font-size: 26px; text-align: center; }
+.subtitle { text-align: center; color: #666; margin-bottom: 25px; font-size: 14px; }
 .form-group { margin-bottom: 20px; }
 label { display: block; margin-bottom: 10px; font-weight: bold; }
 select.custom-select { 
     width: 100%; padding: 12px; border: 1px solid #ddd; 
     border-radius: 8px; font-size: 16px; box-sizing: border-box;
+    background-color: #fff;
 }
 select.custom-select:focus { outline: none; border-color: var(--primary-color); }
 
 .radio-group { display: flex; flex-wrap: wrap; gap: 15px; }
-.radio-group label { display: flex; align-items: center; font-weight: normal; margin: 0; cursor: pointer;}
-.radio-group input[type="radio"] { margin-right: 5px; accent-color: var(--primary-color);}
+.radio-group label { display: flex; align-items: center; font-weight: normal; margin: 0; cursor: pointer; }
+.radio-group input[type="radio"] { margin-right: 5px; accent-color: var(--primary-color); }
 
-/* 按钮与交互状态 */
+.pool-status {
+    text-align: right;
+    font-size: 12.5px;
+    color: #888;
+    margin-bottom: 6px;
+}
+
+/* Generate Button */
 .generate-btn { 
     width: 100%; background-color: var(--primary-color); color: white; 
     border: none; cursor: pointer; font-weight: bold; 
     transition: background 0.3s, transform 0.1s; 
-    margin-top: 10px; padding: 15px; border-radius: 12px; font-size: 18px;
+    padding: 15px; border-radius: 12px; font-size: 18px;
 }
 .generate-btn:hover { background-color: #0096c7; }
 .generate-btn:active { transform: scale(0.98); }
 .generate-btn.loading { background-color: #ccc; cursor: not-allowed; pointer-events: none; }
 
-/* 结果区域 */
-.result-area { text-align: center; margin-top: 35px; padding-top: 25px; border-top: 2px dashed #eee; display: none; }
+/* Result Area */
+.result-area { text-align: center; margin-top: 30px; padding-top: 25px; border-top: 2px dashed #eee; display: none; }
 .thai-name-container {
     display: inline-block; cursor: pointer; transition: opacity 0.2s, transform 0.1s;
     padding: 10px 20px; border-radius: 12px;
 }
-.thai-name-container:hover { background-color: #f0f8ff; opacity: 0.9; }
+.thai-name-container:hover { background-color: #f0f8ff; }
 .thai-name-container:active { transform: scale(0.95); }
-.thai-name { font-size: 50px; color: var(--primary-color); margin: 0; font-weight: bold; letter-spacing: 2px; }
-.speaker-icon { font-size: 24px; vertical-align: super; margin-left: 5px; opacity: 0.6; }
-.pronunciation { font-size: 20px; color: #666; margin-bottom: 15px; margin-top: 5px;}
+.thai-name { font-size: 50px; color: var(--primary-color); margin: 0; font-weight: bold; letter-spacing: 2px; display: inline; }
+.speaker-icon { font-size: 24px; vertical-align: super; margin-left: 5px; opacity: 0.7; }
+.pronunciation { font-size: 20px; color: #666; margin-bottom: 15px; margin-top: 5px; }
 .meaning { font-size: 22px; font-weight: bold; margin-bottom: 10px; }
 .explanation { font-size: 15px; line-height: 1.6; color: #555; text-align: left; background: #f8f9fa; padding: 15px; border-radius: 12px; }
 
-/* 错误与重置 */
-#error-msg { background: #fff1f0; border: 1px solid #ffa39e; padding: 15px; border-radius: 8px; color: #cf1322; display: none; margin-top: 20px; text-align: center; font-weight: bold; line-height: 1.5;}
-.reset-btn { background: #cf1322; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; margin-top: 10px; font-size: 14px;}
+/* Error & Reset */
+#error-msg { background: #fff1f0; border: 1px solid #ffa39e; padding: 15px; border-radius: 8px; color: #cf1322; display: none; margin-top: 20px; text-align: center; font-weight: bold; line-height: 1.5; }
+.reset-btn { background: #cf1322; color: white; border: none; padding: 8px 15px; border-radius: 6px; cursor: pointer; margin-top: 10px; font-size: 14px; }
+.reset-btn:hover { background: #a8071a; }
 
-/* 商业合规：Cookie 横幅 */
+/* Cookie Banner */
 .cookie-banner {
-    position: fixed; bottom: -100px; left: 0; width: 100%;
+    position: fixed; bottom: 0; left: 0; width: 100%;
     background-color: rgba(33, 33, 33, 0.95); color: white;
     padding: 15px 20px; box-sizing: border-box; display: flex;
-    justify-content: space-between; align-items: center;
-    transition: bottom 0.5s ease-in-out; z-index: 1000; font-size: 14px;
+    justify-content: space-between; align-items: center; gap: 15px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease-in-out; z-index: 1000; font-size: 14px;
 }
-.cookie-banner p { margin: 0; max-width: 80%; }
+.cookie-banner.show {
+    transform: translateY(0);
+}
+.cookie-banner p { margin: 0; }
 .cookie-banner a { color: var(--secondary-color); text-decoration: underline; }
 .cookie-banner button {
     background-color: var(--primary-color); color: white; border: none;
     padding: 8px 20px; border-radius: 6px; cursor: pointer; font-weight: bold;
+    white-space: nowrap;
+}
+@media (max-width: 600px) {
+    .cookie-banner {
+        flex-direction: column;
+        text-align: center;
+    }
 }
 
-/* 右侧 SEO 文章区排版美化 */
+/* Privacy Policy Modal */
+.modal-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+.modal-overlay.active {
+    display: flex;
+}
+.modal-content {
+    background: #fff;
+    border-radius: 14px;
+    max-width: 520px;
+    width: 100%;
+    padding: 25px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+.modal-header h3 {
+    margin: 0;
+    color: var(--primary-color);
+}
+.modal-close {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #888;
+    line-height: 1;
+}
+.modal-body p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 12px;
+}
+
+/* Right Column SEO Article */
 .seo-article {
     text-align: left;
     line-height: 1.6;

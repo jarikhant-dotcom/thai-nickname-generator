@@ -3,118 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authentic Thai Nickname Generator | Chue Len (ชื่อเล่น) Finder</title>
+    <meta name="description" content="Discover your authentic Thai nickname (Chue Len) with real native pronunciation, cultural meanings, and style filters. Over 170+ curated Thai nicknames!">
     
-    <title>Thai Nickname Generator - Your Authentic Thai Name</title>
-    <meta name="description" content="A free and easy-to-use Thai nickname generator. Discover authentic Thai nicknames across various styles like cute animals, sweet food, and nature, complete with meanings and pronunciation.">
+    <!-- Open Graph / Social Media -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Authentic Thai Nickname Generator | Chue Len Finder">
+    <meta property="og:description" content="Get a real, culturally accurate Thai nickname with native audio pronunciation and detailed meanings.">
+    <meta property="og:image" content="cover.jpg"> 
     
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Authentic Thai Nickname Generator">
+    <meta name="twitter:description" content="Get a real, culturally accurate Thai nickname with native audio pronunciation.">
+    <meta name="twitter:image" content="cover.jpg">
+
+    <!-- Favicon -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🇹🇭</text></svg>">
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
-    <div class="ad-container" id="ad-top"><span>[ Top Adaptive Ad Placement ]</span></div>
-
+    <!-- Main 2-Column Wrapper -->
     <div class="main-wrapper">
         
-        <div class="card left-column">
-            <div class="header-top" style="text-align: right; margin-bottom: 10px;">
-                <div id="google_translate_element"></div>
+        <!-- Left Column: Core Generator Tool -->
+        <main class="card">
+            <div class="header-top">
+                <!-- Custom Native-Language Selector (Immune to auto-translation) -->
+                <select id="custom-lang-select" class="lang-select" translate="no" aria-label="Select Language">
+                    <option value="en">🌐 English</option>
+                    <option value="th">🇹🇭 ภาษาไทย</option>
+                    <option value="zh-TW">🇹🇼 繁體中文</option>
+                    <option value="zh-CN">🇨🇳 简体中文</option>
+                    <option value="ja">🇯🇵 日本語</option>
+                    <option value="ko">🇰🇷 한국어</option>
+                    <option value="es">🇪🇸 Español</option>
+                    <option value="fr">🇫🇷 Français</option>
+                    <option value="de">🇩🇪 Deutsch</option>
+                </select>
+                <!-- Hidden Google Translate Engine -->
+                <div id="google_translate_element" style="display:none;"></div>
             </div>
 
             <h1>🇹🇭 Thai Nickname Generator</h1>
-            <p class="subtitle">Explore authentic Thai nicknames tailored for you, complete with detailed meanings.</p>
-            
+            <p class="subtitle">Discover an authentic Thai nickname (Chue Len) with cultural meaning</p>
+
             <div class="form-group">
-                <label for="category">Preferred Style:</label>
+                <label for="category">1. Choose a Nickname Style:</label>
                 <select id="category" class="custom-select">
-                    <option value="all">All Styles</option>
-                    <option value="Cute Animals">Cute Animals</option>
-                    <option value="Sweet Fruits & Food">Sweet Fruits & Food</option>
-                    <option value="Nature & Gems">Nature & Gems</option>
-                    <option value="Modern / Western">Modern / Western</option>
-                    <option value="Colors & Appearance">Colors & Appearance</option>
-                    <option value="Traditional & Virtues">Traditional & Virtues</option>
-                    <option value="Plants & Flowers">Plants & Flowers</option>
-                    <option value="Daily Life & Objects">Daily Life & Objects</option>
-                    <option value="Repeated Sounds & Onomatopoeia">Repeated Sounds & Onomatopoeia</option>
-                    <option value="Numbers & Time">Numbers & Time</option>
-                    <option value="Personality & Emotions">Personality & Emotions</option>
+                    <option value="all">🎲 All Styles (Random Mix)</option>
+                    <option value="Cute Animals">🐾 Cute Animals (e.g., Nok, Moo, Maew)</option>
+                    <option value="Sweet Fruits & Food">🍉 Sweet Fruits & Food (e.g., Som, Tang-mo)</option>
+                    <option value="Nature & Gems">💎 Nature & Gems (e.g., Ploy, Fah, Nam)</option>
+                    <option value="Modern / Western">✨ Modern & Trendy (e.g., Bank, Mint, Ice)</option>
+                    <option value="Colors & Appearance">🎨 Colors & Features (e.g., Dang, Lek, Muay)</option>
+                    <option value="Traditional & Virtues">🙏 Traditional & Virtues (e.g., Chok, Keng, Dee)</option>
+                    <option value="Plants & Flowers">🌸 Plants & Flowers (e.g., Bai-toey, Bua, Rose)</option>
+                    <option value="Daily Life & Objects">🎸 Daily Life & Objects (e.g., Stamp, Pleng, Air)</option>
+                    <option value="Repeated Sounds & Onomatopoeia">🎵 Cute Repeated Sounds (e.g., Bam-bam, Gigi)</option>
+                    <option value="Numbers & Time">⏳ Numbers & Time (e.g., Neung, May, Sunday)</option>
+                    <option value="Personality & Emotions">😊 Personality & Vibes (e.g., Joy, Win, Smile)</option>
                 </select>
             </div>
 
             <div class="form-group">
-                <label>Gender Preference:</label>
+                <label>2. Gender Preference:</label>
                 <div class="radio-group">
                     <label><input type="radio" name="gender" value="all" checked> Any</label>
-                    <label><input type="radio" name="gender" value="Female-leaning"> Female-leaning</label>
-                    <label><input type="radio" name="gender" value="Male-leaning"> Male-leaning</label>
+                    <label><input type="radio" name="gender" value="Female-leaning"> Female</label>
+                    <label><input type="radio" name="gender" value="Male-leaning"> Male</label>
                     <label><input type="radio" name="gender" value="Unisex"> Unisex</label>
                 </div>
             </div>
 
-            <button id="generate-btn" class="generate-btn">🎲 Generate Random Nickname</button>
-            
-            <div class="ad-container" id="ad-middle" style="margin-top: 25px; min-height: 60px;">
-                <span>[ In-Content Ad Placement ]</span>
-            </div>
+            <div id="pool-status" class="pool-status"></div>
+
+            <button type="button" class="generate-btn" id="generate-btn">🎲 Generate Random Nickname</button>
 
             <div id="error-msg"></div>
 
             <div class="result-area" id="result-area">
-                <div class="meaning" id="res-meaning">Meaning</div>
-                
-                <div class="thai-name-container" id="speak-btn" title="Click to listen">
-                    <span class="thai-name notranslate" id="res-thai">ชื่อ</span>
+                <div class="thai-name-container" id="speak-btn" title="Click to listen to native Thai pronunciation">
+                    <div class="thai-name" id="res-thai" translate="no">ชื่อ</div>
                     <span class="speaker-icon">🔊</span>
                 </div>
-                
-                <div class="pronunciation notranslate" id="res-pronunciation">Pronunciation</div>
-                <div class="explanation" id="res-explanation">Detailed Explanation</div>
+                <div class="pronunciation" id="res-pronunciation" translate="no">Pronunciation</div>
+                <div class="meaning" id="res-meaning">Meaning</div>
+                <div class="explanation" id="res-explanation">Cultural background and description</div>
             </div>
-        </div>
+        </main>
 
-        <article class="card right-column seo-article">
-            <h2>🇹🇭 Why Do Thai People Have Nicknames?</h2>
-            <p>
-                In Thai culture, almost everyone has a nickname (Thai: <strong>ชื่อเล่น</strong>, chue-len) given at birth by their parents. Because formal Thai names are traditionally long and complex, Thai people prefer using short, catchy nicknames for daily interactions, socializing, and even in the workplace.
-            </p>
+        <!-- Right Column: Cultural Guide & SEO Article -->
+        <aside class="card seo-article">
+            <h2>Understanding Thai Nicknames (Chue Len)</h2>
+            <p>In Thailand, almost everyone has two names: a formal given name (<em>Chue Jing</em>) used on official documents, and a short, casual nickname (<em>Chue Len</em>, literally "play name") used in everyday life by family, friends, and even colleagues.</p>
 
-            <h2>💡 Popular Naming Styles</h2>
-            <p>
-                Thai nicknames draw inspiration from a wide variety of sources. Common styles include:
-            </p>
+            <h2>Why Do Thai People Have Cute Nicknames?</h2>
+            <p>Traditionally, ancient Thai parents believed that giving a newborn a simple, humble, or animal-related nickname (like "Pig", "Ant", or "Frog") would confuse wandering spirits so they wouldn't take the child away. Today, this tradition has evolved into a fun and creative cultural norm.</p>
+
+            <h2>Popular Categories of Thai Nicknames</h2>
             <ul>
-                <li><strong>Animals & Nature:</strong> e.g., "นก" (Nok - Bird), "ฟ้า" (Fah - Sky).</li>
-                <li><strong>Fruits & Food:</strong> e.g., "แตงโม" (Taengmo - Watermelon), "เค้ก" (Cake).</li>
-                <li><strong>Modern Loanwords:</strong> e.g., "Benz" or "Bank".</li>
+                <li><strong>Food & Fruits:</strong> Names like <em>Som</em> (Orange), <em>Tang-mo</em> (Watermelon), and <em>Noey</em> (Butter) are wildly popular, especially for girls.</li>
+                <li><strong>Nature & Gems:</strong> Words symbolizing beauty and strength, such as <em>Ploy</em> (Gemstone), <em>Fah</em> (Sky), and <em>Petch</em> (Diamond).</li>
+                <li><strong>English Loanwords:</strong> Modern parents love short English words like <em>Bank</em>, <em>Mint</em>, <em>Ice</em>, <em>Win</em>, and <em>Joy</em>.</li>
+                <li><strong>Repeated Sounds:</strong> Two-syllable rhythmic names like <em>Bam-bam</em>, <em>Pao-pao</em>, and <em>Gigi</em> sound playful and memorable.</li>
             </ul>
+        </aside>
 
-            <h2>🎲 How to Choose Your Thai Name?</h2>
-            <p>
-                With our free generator, simply choose your preferred style and gender. Click the button to instantly generate an authentic Thai nickname complete with its correct spelling, pronunciation, and meaningful background!
-            </p>
-        </article>
+    </div>
 
-    </div><div class="ad-container" id="ad-bottom"><span>[ Bottom Adaptive Ad Placement ]</span></div>
+    <footer style="text-align: center; color: #888; font-size: 13px; margin-top: 25px;">
+        © 2026 Thai Nickname Generator | <a href="#" id="open-privacy" style="color: #888;">Privacy Policy</a>
+    </footer>
 </div>
 
-<div id="cookie-banner" class="cookie-banner">
-    <p>This website uses cookies to analyze traffic and provide personalized ad experiences. By continuing to use our site, you agree to our <a href="privacy.html">Privacy Policy</a>.</p>
-    <button id="accept-cookie">I Agree</button>
+<!-- Cookie Consent Banner -->
+<div class="cookie-banner" id="cookie-banner">
+    <p>We use cookies and local storage to enhance your experience. By continuing to use this site, you agree to our <a href="#" id="banner-privacy">Privacy Policy</a>.</p>
+    <button id="accept-cookie">Accept</button>
 </div>
 
+<!-- Built-in Privacy Policy Modal -->
+<div class="modal-overlay" id="privacy-modal">
+    <div class="modal-content">
+        <div class="modal-header">
+            <h3>Privacy Policy</h3>
+            <button class="modal-close" id="close-privacy" aria-label="Close">&times;</button>
+        </div>
+        <div class="modal-body">
+            <p><strong>1. Information We Collect:</strong> This website does not require user registration or collect personally identifiable information. Your nickname generation history is stored temporarily in your browser's local session only.</p>
+            <p><strong>2. Cookies & Local Storage:</strong> We use browser local storage to remember your cookie consent preference and language settings.</p>
+            <p><strong>3. Third-Party Services:</strong> Language translation is powered by Google Translate. Speech synthesis uses your device's built-in browser text-to-speech engine.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Google Translate Script -->
 <script type="text/javascript">
 function googleTranslateElementInit() {
   new google.translate.TranslateElement({
-    pageLanguage: 'en',
-    includedLanguages: 'en,th,zh-CN,ja,ko,es,fr,de', // 允许切换的语言：英文、泰语、中文、日韩、欧州语言等
-    layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+      pageLanguage: 'en', 
+      includedLanguages: 'en,th,zh-TW,zh-CN,ja,ko,es,fr,de', 
+      autoDisplay: false
   }, 'google_translate_element');
 }
 </script>
 <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
+<!-- External Data & Logic Scripts -->
 <script src="data.js"></script>
 <script src="app.js"></script>
 

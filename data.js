@@ -1,4 +1,4 @@
-// Global Name Database (Fully English Version)
+// Global Name Database (Cleaned & Deduplicated English Version)
 const nameDB = [
     // === Cute Animals ===
     { category: "Cute Animals", name: "มด", pron: "Mod", meaning: "Ant", gender: "Unisex", desc: "A classic Thai nickname for a petite, hardworking, and down-to-earth person." },
@@ -102,9 +102,8 @@ const nameDB = [
     { category: "Nature & Gems", name: "ดิน", pron: "Din", meaning: "Earth / Soil", gender: "Male-leaning", desc: "Steadfast and grounded, representing the foundation of life." },
     { category: "Nature & Gems", name: "หิน", pron: "Hin", meaning: "Rock", gender: "Male-leaning", desc: "Symbolizes hardness and tenacity." },
     { category: "Nature & Gems", name: "พายุ", pron: "Pha-yu", meaning: "Storm", gender: "Male-leaning", desc: "Full of power and momentum, dominating and fierce." },
-    { category: "Nature & Gems", name: "สกาย", pron: "Sky", meaning: "Sky (English)", gender: "Unisex", desc: "The modern English version of Fah, loved by young people." },
+    { category: "Nature & Gems", name: "สกาย", pron: "Sky", meaning: "Sky (English)", gender: "Unisex", desc: "The modern English version of Fah, symbolizing broad horizons and a generous heart." },
     { category: "Nature & Gems", name: "สโนว์", pron: "Snow", meaning: "Snow", gender: "Female-leaning", desc: "It doesn't snow in Thailand, but that doesn't stop parents from desiring pure white snow." },
-    { category: "Nature & Gems", name: "ซัมเมอร์", pron: "Summer", meaning: "Summer", gender: "Female-leaning", desc: "A seasonal name full of vitality and sunshine." },
     { category: "Nature & Gems", name: "เงิน", pron: "Ngoen", meaning: "Silver", gender: "Male-leaning", desc: "A traditional symbol of wealth." },
     { category: "Nature & Gems", name: "ทอง", pron: "Thong", meaning: "Gold", gender: "Male-leaning", desc: "Thailand's most classic wealth-bringing nickname, representing nobility." },
     { category: "Nature & Gems", name: "รุ้ง", pron: "Roong", meaning: "Rainbow", gender: "Female-leaning", desc: "Rainbow after the rain, representing gorgeousness, beauty, and hope." },
@@ -165,7 +164,6 @@ const nameDB = [
     { category: "Modern / Western", name: "นีออน", pron: "Neon", meaning: "Neon", gender: "Unisex", desc: "Cyberpunk style, shining in the crowd." },
     { category: "Modern / Western", name: "กัปตัน", pron: "Captain", meaning: "Captain", gender: "Male-leaning", desc: "Displays leadership, a super popular boys' nickname." },
     { category: "Modern / Western", name: "ฮีโร่", pron: "Hero", meaning: "Hero", gender: "Male-leaning", desc: "Brave and responsible, the little hero of the family." },
-    { category: "Modern / Western", name: "สกาย", pron: "Sky", meaning: "Sky", gender: "Unisex", desc: "Broad horizons and a generous heart." },
     { category: "Modern / Western", name: "โอเชี่ยน", pron: "Ocean", meaning: "Ocean", gender: "Unisex", desc: "Deep and vast, highly poetic in a modern sense." },
     { category: "Modern / Western", name: "สเปซ", pron: "Space", meaning: "Space", gender: "Male-leaning", desc: "Full of desire to explore the unknown universe." },
     { category: "Modern / Western", name: "นิกกี้", pron: "Nikki", meaning: "Nikki", gender: "Unisex", desc: "A modern and energetic name." },
@@ -248,7 +246,7 @@ const nameDB = [
     { category: "Repeated Sounds & Onomatopoeia", name: "เปาเปา", pron: "Pao-pao", meaning: "Steamed Bun", gender: "Unisex", desc: "A famous child star's nickname, describing chubby cheeks like a bun." },
     { category: "Repeated Sounds & Onomatopoeia", name: "ปิงปอง", pron: "Ping-pong", meaning: "Ping Pong", gender: "Unisex", desc: "Crisp and resonant, full of vitality." },
     { category: "Repeated Sounds & Onomatopoeia", name: "จีจี้", pron: "Gigi", meaning: "Gigi", gender: "Female-leaning", desc: "A modern and playful girl's repeated-sound name." },
-    { category: "Repeated Sounds & Onomatopoeia", name: "มีมี่", pron: "Mimi", meaning: "Mimi", gender: "Female-leaning", desc: "娇嗔可爱 like a little kitten." },
+    { category: "Repeated Sounds & Onomatopoeia", name: "มีมี่", pron: "Mimi", meaning: "Mimi", gender: "Female-leaning", desc: "Endearing and adorable like a little kitten." },
     { category: "Repeated Sounds & Onomatopoeia", name: "นานา", pron: "Nana", meaning: "Various / Nana", gender: "Female-leaning", desc: "Pleasant and memorable, with beautiful meanings in multiple languages." },
     { category: "Repeated Sounds & Onomatopoeia", name: "เจเจ", pron: "JJ", meaning: "JJ", gender: "Male-leaning", desc: "A cool acronym repeated name commonly used by boys." },
     { category: "Repeated Sounds & Onomatopoeia", name: "ดีดี้", pron: "Didi", meaning: "Excellent", gender: "Female-leaning", desc: "A play on the Thai word 'Dee' (Good), implying very good." },
@@ -272,7 +270,7 @@ const nameDB = [
     { category: "Numbers & Time", name: "ซันเดย์", pron: "Sunday", meaning: "Sunday", gender: "Unisex", desc: "Born on Sunday, a bright and sunny day." },
     { category: "Numbers & Time", name: "ไนท์", pron: "Night", meaning: "Night", gender: "Male-leaning", desc: "Born at night, with a mysterious and profound aura." },
     { category: "Numbers & Time", name: "เดย์", pron: "Day", meaning: "Day", gender: "Male-leaning", desc: "Born during the day, open and bright." },
-    { category: "Numbers & Time", name: "ซัมเมอร์", pron: "Summer", meaning: "Summer", gender: "Female-leaning", desc: "Passionate and full of energy." },
+    { category: "Numbers & Time", name: "ซัมเมอร์", pron: "Summer", meaning: "Summer", gender: "Female-leaning", desc: "A seasonal name full of vitality and sunshine." },
     { category: "Numbers & Time", name: "วินเทอร์", pron: "Winter", meaning: "Winter", gender: "Unisex", desc: "A name that brings a touch of coolness to hot Thailand." },
     { category: "Numbers & Time", name: "นาว", pron: "Now", meaning: "Now", gender: "Unisex", desc: "Implies seizing the moment." },
     { category: "Numbers & Time", name: "นิวเยียร์", pron: "New Year", meaning: "New Year", gender: "Unisex", desc: "Lucky ones born on New Year's Day or New Year's Eve." },
